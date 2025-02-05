@@ -1,0 +1,30 @@
+\documentclass{article}
+%版面設定
+\usepackage[a4paper, left=2.54cm, right=2.54cm, top=3.18cm, bottom=3.18cm]{geometry} %頁面設定：A4，左右邊界=2.54cm，上下邊界=3.18cm
+\usepackage{ctex} %CTeX
+\usepackage{titlesec} %titlesec
+%編號設定
+\renewcommand{\thesection}{\chinese{section}、} %編號設定：Section
+\renewcommand{\thesubsection}{（\chinese{subsection}）} %編號設定：Subsection
+\titleformat{\section}{\fontsize{14pt}{16pt}\bfseries}{\thesection}{0pt}{} %編號設定：Section，字體大小：14pt，編碼與標題內容距離=0pt
+\titleformat{\subsection}{\fontsize{12pt}{14pt}\bfseries}{\thesubsection}{0pt}{} %編號設定：Subsection，字體大小：14pt，編碼與標題內容距離=0pt
+%縮排設定
+\titlespacing{\subsection}{3em}{*1}{*1} %縮排=3em，與Word相同
+%頁碼設定
+\pagenumbering{gobble} %隱藏頁碼，若不需要刪除即可
+%字體設定
+\setCJKmainfont{edukai.ttf} %中文字體：教育部標楷體，請上傳edukai.ttf至Overleaf檔案管理介面
+\setmainfont{Times New Roman} %英文字體：Times New Roman，無需上傳ttf檔案
+\renewcommand{\normalsize}{\fontsize{12pt}{14pt}\selectfont} %內文字體大小：12pt
+%正文
+\begin{document}
+\setcounter{section}{0} %自定義Section起始數字，0-n
+\section{研究計畫內容：}
+\subsection{摘要}
+\subsection{研究動機與研究問題}
+\hangindent=5em \hangafter=0 %縮排控制，與Word相同
+這是第一段測試文字
+\par %換段控制
+\hangindent=5em \hangafter=0 %縮排控制，與Word相同
+這是第二段測試文字 %這是第二段測試文字需要使用「換段控制」及「縮排控制」方能正確換段及縮排。
+\end{document} 
